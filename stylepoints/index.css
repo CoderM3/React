@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(232, 232, 232);
+    transition: background-color .5s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 290vh;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.8 ease;
+}
+
+#overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Navimachine*/
+
+#sidebar {
+    display: flex;
+    position: fixed;
+    border: 1px black;
+    top: 0;
+    left: -15vw;
+    height: 100vh;
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    background-color: #434343;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+.navbar-item {
+    position: relative;
+    background-color: #434343;
+    display: flex;
+    width: 9vw;
+    margin: 0.438rem 0rem;
+    transition: width 0.3s;
+    align-items: center;
+}
+
+#navbar-text {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    margin: 0.438rem 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#copyright {
+    display: flex;
+    position: absolute;
+    top:100vh;
+    transform:translateY(-100%);
+}
+
+.loginbar {
+    display: flex;
+    position: relative;
+    border: 1px rgb(232, 232, 232);
+    height: 8.5vh;
+    width: 12vw;
+    margin: 1rem 1rem;
+    background-color: transparent;
+}
+
+.profilecircle {
+    display: flex;
+    border-radius: 100px;
+    height: 8vh;
+    width: 4vw;
+    margin: 0.2rem 0.5rem;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.loginbutton {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    top: 26px;
+    left: 100px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar-item:hover {
+    background-color: #861010;
+    width: 15.01vw;
+
+}
+
+/*sidebar buttonr*/
+#toggleSidebar {
+    background-color: #434343;
+    display: flex;
+    position: absolute;
+    right: -25px; /* Positioned to the right edge of the sidebar */
+    top: 0;
+    width: 3vw; /* Thin width for the clickable area */
+    height: 100%;
+    cursor: pointer;
+    border: transparent;
+    border-radius: 100px;
+}
+
+/*Sidebar Icons*/
+
+.fa-street-view{
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 5vb;
+    left: 1.7vb;
+    transition: all 0.3s ease;
+}
+
+.fa-home{
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 13vb;
+    left: 1.5vb;
+        transition: all 0.3s ease;
+}
+
+.fa-puzzle-piece{
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 19vb;
+    left: 1.7vb;
+    transition: all 0.3s ease;
+}
+
+.fa-question {
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 25vb;
+    left: 1.7vb;
+    transition: all 0.3s ease;
+}
+
+.fa-id-badge {
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 30.6vb;
+    left: 1.7vb;
+    transition: all 0.3s ease;
+}
+
+.fa-info {
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 37vb;
+    left: 2vb;
+    transition: all 0.3s ease;
+}
+
+.fa-angle-left {
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    top: 47vb;
+    left: 2vb;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.hide-icons {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.hide-arrow.fa-angle-left {
+    opacity: 100;
+    transition: all 0.3s ease;
+}
+
+/*finally, bagian body beranda*/
+
+.container1 {
+    top: 30%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    border: 1px #434343;
+    position: absolute;
+}
+
+.container1 h1 {
+    font-family: "Lato", sans-serif ;
+    font-weight: 550;
+    font-size: 3rem;
+    width: 30vw;
+}
+
+.container1 p {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 30px;
+    width: 24vw;
+    margin-top: 40px;
+}
+
+/*container kiri*/
+.container2_1 {
+    top: 84%;
+    right: 42.4%;
+    transform: translate(-50%, -50%);   
+    background-image: url("aset/office.jpg");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    position: absolute;
+    height: 32.5vh;
+    width: 39vw;
+    padding-left: 16vb;
+    padding-top: 6vb;
+}
+
+.container2_1 h2 {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 12.8vw;
+    color: #ffffff;
+}
+
+.container2_1 p {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 2vb;
+}
+
+.container2_1 span {
+    display: block;
+    left: 2px;
+    width: 3.5vw;
+    height: 1vh;
+    margin-top: 2vb;
+    position: relative;
+    background: #8f0000;
+}
+
+/*container tengah*/
+.container2_2 {
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #cb0b0b;
+    position: absolute;
+    background-image: url("aset/corp.jpg");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    height: 32.5vh;
+    width: 24vw;
+    padding-left: 8vb;
+    padding-top: 6vb;
+    padding-right: 1.2vb;
+}
+
+.container2_2 h2 {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 12.8vw;
+    color: #ffffff;
+}
+
+.container2_2 p {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 2vb;
+}
+
+.container2_2 span {
+    display: block;
+    left: 2px;
+    width: 3.5vw;
+    height: 1vh;
+    margin-top: 2vb;
+    position: relative;
+    background: #8f0000;
+}
+
+/*container kanan*/
+.container2_3 {
+    top: 84%;
+    left: 81.7%;
+    transform: translate(-50%, -50%);
+    background-image: url("aset/employee.jpg");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    position: absolute;
+    height: 32.5vh;
+    width: 39vw;
+    padding-left: 8vb;
+    padding-top: 6vb;
+    padding-right: 10vb;
+}
+
+.container2_3 h2 {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 12.8vw;
+    color: #ffffff;
+}
+
+.container2_3 p {
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 2vb;
+}
+
+.container2_3 span {
+    display: block;
+    left: 2px;
+    width: 3.5vw;
+    height: 1vh;
+    margin-top: 2vb;
+    position: relative;
+    background: #8f0000;
+}
+
+/*dibawah 3 container*/
+.container3 {
+    transform: translate(1%, 112%);
+    border: 1px black;
+    height: 101.65vh;
+    width: 98.982vw;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container3 img {
+    margin-bottom: 20px;
+}
+
+.container3 h3 {
+    font-family: "Lato", sans-serif ;
+    font-weight: 550;
+    font-size: 3rem;
+    width: 23.947vw;
+    text-align: center;
+}
+
+.container3 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-top: 3vb;
+    margin-bottom: 3vb;
+    text-align: center;
+}
+
+.container3_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 51.4vh;
+    width: 143.4vh;
+    position: relative;
+    padding-top: 90px;
+}
+
+.container3_1 .buttons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+  .container3_1 button {
+    font-family: "Lato", sans-serif;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 190px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  .container3_1 button:hover {
+    background-color: #ddd;
+  }
+
+  .container3_1 button.active {
+    background-color: #ccc;
+  }
+
+  .container3_1 .tabcontent {
+    padding: 6px 2px;
+    display: none;
+    width: 100%;
+    height: 36vh;
+  }
+
+  .container3_1 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: 35vw;
+    top: 50%;
+    padding-left: 30px;
+    text-align: left;
+    align-items: center;
+    position: absolute;
+}
+
+.container4 {
+    height: 22vh;
+    width: 100%;
+    transform: translate(0%, 232vh);
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.container4 h4 {
+    font-family: "Lato", sans-serif ;
+    font-weight: 550;
+    font-size: 3rem;
+    width: 32vw;
+    text-align: center;
+    margin-bottom: 30px ;
+}
+
+.container4 a {
+    background-color:rgb(0, 128, 255);
+    text-decoration: none;
+    font-family: "Lato", sans-serif ;
+    color: white;
+    width: 9.4vw;
+    height: 8vh;
+    font-size: 23px;
+    text-align: center;
+    line-height: 8vh;
+    border-radius: 5px;
+}
+
+footer {
+    position: absolute;
+    top: 286vh;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif ;
+    color: #ffffff;
+}

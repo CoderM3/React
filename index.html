@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet"  href="stylepoints/index.css">
+</head>
+<body>
+    <div id="overlay"></div>
+    <nav id="navigation">
+        <div id="sidebar">
+            <button id="toggleSidebar">
+                <i class="fa fa-street-view"></i>
+                <i class="fa fa-home"></i>
+                <i class="fa fa-puzzle-piece"></i>
+                <i class="fa fa-question"></i>
+                <i class="fa fa-id-badge"></i>
+                <i class="fa fa-info"></i>
+                <i class="fa fa-angle-left"></i>
+            </button>
+
+            <div class="loginbar">
+                <div class="profilecircle"></div>
+                <a href="#" class="loginbutton">Log in</a>
+            </div>
+
+            <menu id="navbar-list">
+                <li class="navbar-item">
+                    <a href="index.html" id="navbar-text">
+                        Beranda
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" id="navbar-text">
+                        Tutorial
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="faq.html" id="navbar-text">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" id="navbar-text">
+                        CV Publik
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about_us.html" id="navbar-text">
+                        Tentang Kami
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html" id="navbar-text">
+                        Kontak Kami
+                    </a>
+                </li>
+
+                <div id="copyright">
+                        <a href="#" id="navbar-text">
+                            © 2024 - 2024 Ambatukam.Ltd - All Rights Reserved.
+                        </a>
+                    </li>
+                </div>
+            </menu>
+        </div>
+    </nav>
+    
+
+    <section id="mainpage">
+        <div class="container1">
+            <h1>Buat CV anda, untuk masa depan anda</h1>
+            <p>Walaupun website ini simple,
+                anda dapat membuat CV anda sendiri hanya dengan beberapa klik</p>
+        </div>
+
+        <div class="container2_1">
+            <h2>Mudah Dipakai</h2>
+            <span></span>
+            <p>Cukup dengan memasukkan biodata dan beberapa info lainnya, <br>anda bisa membuat CV anda sendiri.</p>
+        </div>
+
+        <div class="container2_2">
+            <h2>Unjuk Gigi Anda!</h2>
+            <span></span>
+            <p>Dengan CV, anda dapat menunjukkan keahlian Anda dalam format nyata dan praktis.</p>
+        </div>
+
+        <div class="container2_3">
+            <h2>Tidak Perlu Biaya</h2>
+            <span></span>
+            <p>Kami tidak mengambil biaya dari tiap CV yang anda buat, buat CV sebanyak yang anda butuhkan!</p>
+        </div>
+    </section>
+
+    <section id="mainpage2">
+        <div class="container3">
+            <img src="stylepoints/aset/file.png" alt="ini_file" width="200" height="200">
+            <h3>Siap Membantu Anda</h3>
+            <p>Layanan di situs pembuat CV Anda bekerja lebih 
+                baik dan membantu Anda melakukan lebih banyak hal saat Anda masuk. 
+                Akun Anda memberi akses ke fitur-fitur berguna seperti pengisian otomatis, 
+                rekomendasi yang dipersonalisasi, dan lainnya—kapan saja dan di perangkat apa saja.</p>
+                <div class="container3_1">
+                    <div class="buttons">
+                        <button class="tablinks" onclick="openAbout(event, 'Mudah')">Mudah</button>
+                        <button class="tablinks" onclick="openAbout(event, 'Personal')">Personal</button>
+                        <button class="tablinks" onclick="openAbout(event, 'Perhatian')">Perhatian</button>
+                    </div>
+                    <div id="Mudah" class="tabcontent">
+                        <p>Buat CV yang mengesankan secara visual dengan platform kami yang mudah digunakan, 
+                            bahkan tanpa pengalaman desain sebelumnya. 
+                            Buat resume yang tampak hebat dan mengomunikasikan keterampilan Anda secara efektif.</p>
+                    </div>
+                      
+                      <div id="Personal" class="tabcontent">
+                        <p>Personalisasikan CV Anda secara mudah dengan berbagai template, tata letak, dan opsi desain yang membantu 
+                            Anda menonjol dari yang lain dan memberikan kesan mengesankan pada manajer perekrutan.</p>
+                      </div>
+                      
+                      <div id="Perhatian" class="tabcontent">
+                        <p>Dengan template yang dapat disesuaikan dan fitur yang mudah digunakan, 
+                            Anda dapat membuat CV yang menyoroti kekuatan, pengalaman, dan keterampilan Anda, 
+                            membantu Anda diperhatikan oleh pemberi kerja lebih cepat dan mendapatkan peluang berikutnya.</p>
+                      </div>
+                </div>
+        </div>
+    </section>
+    <section>
+        <div class="container4">
+            <h4>Start Making Your CV Here!</h4>
+            <a href="#" id="button">Log in</a>
+        </div>
+    </section>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>

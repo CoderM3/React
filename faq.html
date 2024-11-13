@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Page</title>
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        display: flex;
+        background-color: #f0f0f0;
+    }
+    /* Sidebar Styling */
+    .sidebar {
+      width: 250px;
+      background-color: #666;
+      color: white;
+      position: fixed;
+      height: 100%;
+      padding-top: 20px;
+    }
+    .sidebar h1 {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      color: lightgray;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background-color: #444;
+    }
+    .sidebar .active {
+      background-color: #b02e3b;
+    }
+    /* FAQ Section Styling */
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .faq-item {
+        background-color: #e0e0e0;
+        margin-bottom: 10px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    .faq-item.active .answer {
+        display: block;
+    }
+    .question {
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .answer {
+        display: none;
+        color: #666;
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Tutor</h1>
+    <a href="#">Log in</a>
+    <a href="#">Beranda</a>
+    <a href="#">Tutorial</a>
+    <a href="#" class="active">FAQ</a>
+    <a href="#">CV Publik</a>
+    <a href="#">Tentang Kami</a>
+    <a href="#">Kontak Kami</a>
+  </div>
+
+  <div class="content">
+    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+    
+    <div class="faq-item">
+        <div class="question">
+            Apa yang Seharusnya Ada dalam CV?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            CV sebaiknya mencakup pengalaman kerja, pendidikan, keterampilan, dan kontak. Sesuaikan informasi tersebut dengan pekerjaan yang dituju.
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="question">
+            Bagaimana Saya Bisa Menonjolkan CV Saya?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            Anda bisa menonjolkan CV dengan menunjukkan keterampilan yang relevan, pengalaman, dan prestasi yang berhubungan dengan pekerjaan yang diincar.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">
+            Apakah Informasi Saya Akan Aman Saat Menggunakan Template Ini?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            Kami memastikan bahwa informasi Anda akan tetap aman dan tidak dibagikan tanpa izin Anda.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">
+            Apakah Template Ini Bisa Dicetak dengan Baik?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            Template ini dirancang agar bisa dicetak dengan baik di berbagai ukuran kertas, terutama A4.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">
+            Bagaimana Cara Membuat CV yang Menarik Perhatian Perusahaan?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            Gunakan format yang bersih dan ringkas, sertakan pengalaman dan keterampilan yang relevan, serta hindari informasi yang kurang penting.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">
+            Apa yang Harus Dihindari Saat Menulis CV?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            Hindari kesalahan penulisan, informasi yang berlebihan, dan data yang tidak relevan dengan pekerjaan yang diinginkan.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">
+            Bagaimana cara suapaya banyak followers?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            Bikin konten laaaa.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">
+            PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?
+            <span>&#9662;</span>
+        </div>
+        <div class="answer">
+            PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP.
+        </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+  </script>
+</body>
+</html>
